@@ -40,10 +40,6 @@ final class API {
                 completion(nil, "Erro \(response.statusCode) \(String(describing: error))")
             default:
                 guard let data = data else { return }
-                
-                print("DATA")
-                print(data.toString())
-                
                 do  {
                     let object = try JSONDecoder().decode(T.self, from: data)
                     completion(object, nil)
@@ -63,10 +59,8 @@ final class API {
             cachePolicy: .reloadRevalidatingCacheData,
             timeoutInterval: 10
         )
-        
+        dump(body)
         body.map { request.httpBody = $0 as? Data }
-        dump(request.httpBody)
-        
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         request.httpMethod = method.rawValue
         return request

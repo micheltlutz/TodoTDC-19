@@ -124,7 +124,7 @@ extension TodosListViewController: GenericListView {
     
     func createItem(text: String) {
         let category = Category(id: 1, title: "Pessoal", color: "#8e44ad")
-        let todo = Todo(title: text,
+        let todo = Todo(id: 2, title: text,
                         category: category)
         self.presenter.persistData(todo: todo)
     }
