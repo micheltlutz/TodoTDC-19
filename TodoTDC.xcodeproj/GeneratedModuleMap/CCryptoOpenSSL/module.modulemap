@@ -1,0 +1,4 @@
+module CCryptoOpenSSL {
+    umbrella "/Volumes/MARK5_DADOS/Vapor/TodoTDC/.build/checkouts/crypto/Sources/CCryptoOpenSSL/include"
+    export *
+}

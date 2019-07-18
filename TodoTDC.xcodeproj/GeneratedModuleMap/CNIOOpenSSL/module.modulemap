@@ -1,0 +1,4 @@
+module CNIOOpenSSL {
+    umbrella "/Volumes/MARK5_DADOS/Vapor/TodoTDC/.build/checkouts/swift-nio-ssl/Sources/CNIOOpenSSL/include"
+    export *
+}
