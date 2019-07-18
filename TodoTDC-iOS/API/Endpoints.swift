@@ -8,7 +8,7 @@
 import Foundation
 
 enum Endpoints: String {
-    private static let base = "http://192.168.1.140:8080/"
+    private static let base = "http://localhost:8080/"
     case category = "category/"
     case todos = "todos/"
     
